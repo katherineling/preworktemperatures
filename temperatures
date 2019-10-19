@@ -1,0 +1,68 @@
+# assign a variable to the list of temperatures
+
+list_of_temperatures = [33,66,65,59,60,62,64,70,76,80,81,80,83,90,79,61,53,50,49,53,48,45,39]
+
+# 1. Calculate the minimum of the list and print the value using print()
+
+min_temp = min(list_of_temperatures)
+print(min_temp)
+
+
+# 2. Calculate the maximum of the list and print the value using print()
+
+max_temp = max(list_of_temperatures)
+print(max_temp)
+
+
+
+# 3. Items in the list that are greater than 70ºC and print the result
+
+for i in list_of_temperatures:
+    if i > 70:
+        print(i)
+    
+
+# 4. Calculate the mean temperature throughout the day and print the result
+
+sum_temperatures = sum(list_of_temperatures)
+
+num_temperatures = len(list_of_temperatures)
+
+average_temp = sum_temperatures / num_temperatures
+
+print(average_temp)
+
+
+
+# 5.1 Solve the fault in the sensor by estimating a value
+
+estimated_value = 62
+
+
+# 5.2 Update of the estimated value at 03:00 on the list
+
+list_of_temperatures.insert(3, 62)
+
+print(list_of_temperatures)
+
+# Print True or False depending on whether you would change the cooling system or not
+
+hours = list(range(len(list_of_temperatures)))
+hours_elapsed = 0
+list_of_temperatures = [33,66,65,62,59,60,62,64,70,76,80,81,80,83,90,79,61,53,50,49,53,48,45,39]
+
+sum_temperatures = sum(list_of_temperatures)
+
+num_temperatures = len(list_of_temperatures)
+
+average_temp = sum_temperatures / num_temperatures
+
+
+if hours_elapsed >= 4 and i in list_of_temperatures >= 70:
+        print("TRUE")
+elif i > 80:
+    print("TRUE")
+elif average_temp > 65:
+    print("TRUE")
+else:
+    print("FALSE")
